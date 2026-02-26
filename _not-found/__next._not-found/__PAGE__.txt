@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:I[22016,["/shraddhaSetu/_next/static/chunks/fb2acc2d3312b48b.js","/shraddhaSetu/_next/static/chunks/d2be314c3ece3fbe.js"],""]
+3:I[97367,["/shraddhaSetu/_next/static/chunks/fb2acc2d3312b48b.js","/shraddhaSetu/_next/static/chunks/d2be314c3ece3fbe.js"],"OutletBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"BA0dW-X8lOARNvJgZuVBZ","rsc":["$","$1","c",{"children":[["$","div",null,{"style":{"minHeight":"70vh","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","textAlign":"center","padding":"var(--sp-2xl) var(--sp-lg)"},"children":[["$","div",null,{"style":{"fontSize":"5rem","marginBottom":"var(--sp-lg)"},"children":"🕉"}],["$","h1",null,{"style":{"fontFamily":"'Vesper Libre', serif","fontSize":"var(--fs-3xl)","color":"var(--crimson)","marginBottom":"var(--sp-md)"},"children":"पृष्ठ नहीं मिला"}],["$","p",null,{"style":{"color":"var(--ink-muted)","marginBottom":"var(--sp-xl)","maxWidth":"400px","lineHeight":1.8},"children":"आप जिस पृष्ठ को खोज रहे हैं वह उपलब्ध नहीं है। कृपया होमपेज पर जाएँ।"}],["$","$L2",null,{"href":"/","className":"btn btn-primary","children":"🏠 होमपेज पर जाएँ"}]]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"loading":null,"isPartial":false}
+5:null
