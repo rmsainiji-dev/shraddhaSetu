@@ -1,7 +1,6 @@
-/** @type {import('next').NextConfig} */
 const isProd = process.env.NODE_ENV === "production";
 
-const nextConfig = {
+module.exports = {
   output: "export",
   trailingSlash: true,
   images: {
@@ -9,5 +8,3 @@ const nextConfig = {
   },
   basePath: isProd ? "/shraddhaSetu" : "",
 };
-
-module.exports = nextConfig;
