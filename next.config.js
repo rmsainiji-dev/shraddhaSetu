@@ -1,3 +1,5 @@
+const repoName = "shraddhaSetu";
+
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
@@ -6,5 +8,6 @@ module.exports = {
   images: {
     unoptimized: true,
   },
-  basePath: isProd ? "/shraddhaSetu" : "",
+  basePath: isProd ? `/${repoName}` : "",
+  assetPrefix: isProd ? `/${repoName}/` : "",
 };
