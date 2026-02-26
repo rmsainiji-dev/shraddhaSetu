@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.shraddhaSetu.in/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.shraddhaSetu.in/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.shraddhaSetu.in/"/>
+  </url>
+
+  <!-- Hanuman Chalisa Hindi -->
+  <url>
+    <loc>https://www.shraddhaSetu.in/hanuman-chalisa-hindi/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://www.shraddhaSetu.in/hanuman-chalisa-hindi/"/>
+  </url>
+
+  <!-- Hanuman Chalisa Sanskrit -->
+  <url>
+    <loc>https://www.shraddhaSetu.in/hanuman-chalisa-sanskrit/</loc>
+    <lastmod>2025-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="sa" href="https://www.shraddhaSetu.in/hanuman-chalisa-sanskrit/"/>
+  </url>
+
+</urlset>
