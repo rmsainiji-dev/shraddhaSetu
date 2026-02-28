@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --no-turbo",
+    "build": "next build",
     "deploy": "next build --no-turbo && gh-pages -d out"
   },
   "dependencies": {
