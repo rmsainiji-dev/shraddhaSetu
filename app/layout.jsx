@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata = {
   metadataBase: new URL("https://www.shraddhaSetu.in"),
@@ -38,7 +39,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html  lang="hi" data-scroll-behavior="smooth">
+    <html lang="hi" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -56,6 +57,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
+        <GoogleAnalytics gaId="G-67JCCZKVCY" /> {/* ← Replace with your ID */}
       </body>
     </html>
   );
