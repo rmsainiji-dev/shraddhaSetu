@@ -10,7 +10,7 @@ export const metadata = {
     template: "%s | ShraddhaSetu",
   },
    verification: {
-    google:"j5tIntV3AoNXHhUXwxMw8hkPfMmm0klzFQ1U8cIDrC8",  // paste your code here
+    google:"XblLD4XcUi0fcVduB22J3EJD5pB-U9WNJFW0dNKltnE",  // paste your code here
   },
   description:
     "ShraddhaSetu एक पवित्र हिंदू भक्ति मंच है जहाँ आप हनुमान चालीसा, आरती, मंत्र और स्तोत्र हिंदी तथा संस्कृत में पढ़ सकते हैं।",
