@@ -1,13 +1,9 @@
-const repoName = "shraddhaSetu";
-
-const isProd = process.env.NODE_ENV === "production";
-
-module.exports = {
-  output: "export",
-  trailingSlash: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  trailingSlash: false,
   images: {
-    unoptimized: true,
+    unoptimized: false,
   },
-  basePath: isProd ? `/${repoName}` : "",
-  assetPrefix: isProd ? `/${repoName}/` : "",
 };
+
+module.exports = nextConfig;
