@@ -9,6 +9,9 @@ export const metadata = {
     default: "ShraddhaSetu – हिंदू भक्ति पोर्टल | हनुमान चालीसा, आरती, मंत्र",
     template: "%s | ShraddhaSetu",
   },
+   verification: {
+    google:"j5tIntV3AoNXHhUXwxMw8hkPfMmm0klzFQ1U8cIDrC8",  // paste your code here
+  },
   description:
     "ShraddhaSetu एक पवित्र हिंदू भक्ति मंच है जहाँ आप हनुमान चालीसा, आरती, मंत्र और स्तोत्र हिंदी तथा संस्कृत में पढ़ सकते हैं।",
   keywords: [
