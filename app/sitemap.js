@@ -1,5 +1,7 @@
+export const dynamic = "force-static";  // ← Add this line
+
 export default function sitemap() {
-  const baseUrl = "https://shraddha-setu.vercel.app/"; // change this
+  const baseUrl = "https://shraddha-setu.vercel.app/";
 
   return [
     {
