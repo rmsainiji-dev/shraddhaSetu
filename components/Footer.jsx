@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const footerLinks = {
   bhakti: [
     { href: "/hanuman-chalisa-hindi", label: "हनुमान चालीसा " },
-    // { href: "/hanuman-chalisa-sanskrit", label: "हनुमान चालीसा (संस्कृत)" },
+    { href: "/hanuman-ashtak", label: "हनुमान अष्टक" },
+    { href: "/aarti/hanuman-ji-aarti", label: "हनुमान जी की आरती" },
   ],
   coming: [
     { href: "#", label: "आरती संग्रह (जल्द)" },
@@ -12,7 +16,16 @@ const footerLinks = {
   ],
 };
 
+function pathMatches(pathname, href) {
+  if (!href || href === "#") return false;
+  const p = pathname.replace(/\/$/, "") || "/";
+  const h = href.replace(/\/$/, "") || "/";
+  return p === h;
+}
+
 export default function Footer() {
+  const pathname = usePathname() || "";
+
   return (
     <footer className="site-footer" role="contentinfo">
       <div className="container">
@@ -21,7 +34,6 @@ export default function Footer() {
         </div>
 
         <div className="footer-grid">
-          {/* Brand */}
           <div className="footer-brand">
             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
               <span style={{ fontSize: "2rem", filter: "drop-shadow(0 0 8px rgba(218,165,32,0.5))" }}>ॐ</span>
@@ -41,17 +53,28 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Bhakti Links */}
           <div>
             <h3 className="footer-heading">भक्ति सामग्री</h3>
             <nav className="footer-links" aria-label="भक्ति लिंक">
               {footerLinks.bhakti.map((l) => (
-                <Link key={l.href} href={l.href} className="footer-link">{l.label}</Link>
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className="footer-link"
+                  aria-current={pathMatches(pathname, l.href) ? "page" : undefined}
+                  onClick={(e) => {
+                    if (pathMatches(pathname, l.href)) {
+                      e.preventDefault();
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }
+                  }}
+                >
+                  {l.label}
+                </Link>
               ))}
             </nav>
           </div>
 
-          {/* Coming Soon */}
           <div>
             <h3 className="footer-heading">शीघ्र आ रहा है</h3>
             <nav className="footer-links" aria-label="आगामी सामग्री">
@@ -65,7 +88,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} ShraddhaSetu – सर्वाधिकार सुरक्षित</span>
           <span style={{ color: "rgba(253,232,200,0.2)" }}>•</span>

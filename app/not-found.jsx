@@ -1,5 +1,6 @@
 import Link from "next/link";
-
+export const dynamic = 'force-static';
+export const revalidate = false;
 export const metadata = {
   title: "पृष्ठ नहीं मिला – 404 | ShraddhaSetu",
 };

@@ -1,19 +1,20 @@
 import Link from "next/link";
 import DevotionalCard from "../components/DevotionalCard";
 import { websiteJsonLd } from "../components/seoUtils";
-
+export const dynamic = 'force-static';
+export const revalidate = false;
 export const metadata = {
-  title: "ShraddhaSetu – हिंदू भक्ति पोर्टल | हनुमान चालीसा, आरती, मंत्र",
+  title: "ShraddhaSetu – पवित्र भक्ति पोर्टल | हनुमान चालीसा, आरती, मंत्र",
   description:
-    "ShraddhaSetu पर पढ़ें हनुमान चालीसा, आरती, मंत्र और स्तोत्र। हिंदी और संस्कृत में संपूर्ण भक्ति सामग्री। सुंदर, सरल और पवित्र प्रस्तुति।",
+    "ShraddhaSetu पर पढ़ें हनुमान चालीसा, आरती, मंत्र और स्तोत्र। संपूर्ण भक्ति सामग्री – सुंदर, सरल और पवित्र प्रस्तुति।",
   openGraph: {
     title: "ShraddhaSetu – श्रद्धा का पवित्र सेतु",
-    description: "हनुमान चालीसा, आरती, मंत्र और स्तोत्र – हिंदी व संस्कृत में",
-    url: "https://www.shraddhaSetu.in",
+    description: "हनुमान चालीसा, आरती, मंत्र और स्तोत्र – शांत, सरल और पवित्र वातावरण में।",
+    url: "https://shraddha-setu.vercel.app/",
     type: "website",
   },
   alternates: {
-    canonical: "https://www.shraddhaSetu.in",
+    canonical: "https://shraddha-setu.vercel.app/",
   },
 };
 
@@ -24,8 +25,15 @@ const featuredContent = [
     category: "चालीसा",
     title: "हनुमान चालीसा",
     description:
-      "संपूर्ण हनुमान चालीसा– 40 चौपाईयाँ, दोहा, अर्थ और महत्व सहित। गोस्वामी तुलसीदास रचित।",
-    lang: "हिंदी",
+      "संपूर्ण हनुमान चालीसा – 40 चौपाईयाँ, दोहा, अर्थ और महत्व सहित। गोस्वामी तुलसीदास रचित।",
+  },
+  {
+    href: "/hanuman-ashtak",
+    icon: "📿",
+    category: "स्तोत्र",
+    title: "हनुमान अष्टक",
+    description:
+      "संकटमोचन श्री हनुमान अष्टक का पावन पाठ करें और भक्ति, साहस तथा विश्वास का अनुभव करें।",
   },
   // {
   //   href: "/hanuman-chalisa-sanskrit",
@@ -37,13 +45,12 @@ const featuredContent = [
   //   lang: "Sanskrit",
   // },
   {
-    href: "#",
+    href: "/aarti/hanuman-ji-aarti",
     icon: "🔔",
     category: "आरती",
     title: "आरती संग्रह",
     description:
-      "श्री राम आरती, हनुमान आरती, लक्ष्मी आरती और अन्य देवी-देवताओं की आरतियाँ। (शीघ्र आ रहा है)",
-    lang: "जल्द",
+      "हनुमान जी की आरती से अपनी आरती साधना शुरू करें। जल्द ही अन्य आरतियाँ भी जोड़ी जाएँगी।",
   },
   {
     href: "#",
@@ -76,8 +83,8 @@ export default function HomePage() {
             <span className="gold-word">ShraddhaSetu</span>
           </h1>
           <p className="hero-subtitle">
-            हनुमान चालीसा, आरती, मंत्र और स्तोत्र – हिंदी तथा संस्कृत में।
-            श्रद्धा और आस्था के साथ भक्ति का अनुभव करें।
+            हनुमान चालीसा, आरती, मंत्र और स्तोत्र – शांत, सरल और पवित्र प्रस्तुति।
+            श्रद्धा के साथ भक्ति का अनुभव करें।
           </p>
           <div className="hero-cta">
             <Link href="/hanuman-chalisa-hindi" className="btn btn-primary">
@@ -150,7 +157,7 @@ export default function HomePage() {
             textAlign: "center",
           }}>
             यहाँ आप हनुमान चालीसा, रामायण के दोहे-चौपाई, विभिन्न आरतियाँ और
-            वैदिक मंत्र हिंदी व संस्कृत में पढ़ सकते हैं। हर सामग्री सुंदर,
+            वैदिक मंत्र पढ़ सकते हैं। हर सामग्री सुंदर,
             प्रामाणिक और भक्तिपूर्ण वातावरण में प्रस्तुत की गई है।
           </p>
         </div>
@@ -162,7 +169,7 @@ export default function HomePage() {
           <div className="text-center">
             <span className="section-label">भक्ति सामग्री</span>
             <h2 className="section-title" id="content-heading">
-              आज ही पाठ करें
+              आज से अपनी भक्ति यात्रा शुरू करें
             </h2>
             <div className="lotus-divider lotus-divider--center">
               <div className="lotus-line"></div>
@@ -171,7 +178,7 @@ export default function HomePage() {
             </div>
             <p className="section-desc" style={{ margin: "0 auto" }}>
               अपनी श्रद्धा और आस्था के साथ इन पावन ग्रंथों का पाठ करें।
-              हर पाठ आपके मन को शांति और आत्मा को बल देगा।
+              हर पाठ आपके मन को शांति, स्थिरता और आत्मिक बल देगा।
             </p>
           </div>
 
@@ -229,7 +236,7 @@ export default function HomePage() {
           <div className="card-grid" style={{ marginTop: "var(--sp-xl)" }} role="list">
             {[
               { icon: "📖", title: "प्रामाणिक सामग्री", desc: "सभी ग्रंथ और पाठ प्रामाणिक स्रोतों से लिए गए हैं। शुद्ध देवनागरी लिपि में।" },
-              { icon: "🌐", title: "द्विभाषी", desc: "हिंदी और संस्कृत दोनों भाषाओं में सामग्री उपलब्ध है। अंग्रेजी भी जल्द।" },
+              { icon: "🌐", title: "सरल भाषा", desc: "सुगम और स्पष्ट भाषा में भक्ति सामग्री उपलब्ध है।" },
               { icon: "📱", title: "मोबाइल फ्रेंडली", desc: "किसी भी डिवाइस पर सुंदर अनुभव। जब चाहें, जहाँ चाहें पाठ करें।" },
               { icon: "⚡", title: "तेज़ और सरल", desc: "कोई विज्ञापन नहीं, कोई रुकावट नहीं। सिर्फ पवित्र भक्ति का अनुभव।" },
             ].map((f) => (
@@ -239,6 +246,53 @@ export default function HomePage() {
                 <p className="card-desc">{f.desc}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="section" aria-labelledby="guidance-heading">
+        <div className="container">
+          <div className="text-center">
+            <span className="section-label">भक्ति मार्गदर्शन</span>
+            <h2 className="section-title" id="guidance-heading">
+              आज ही पाठ शुरू करें
+            </h2>
+            <div className="lotus-divider lotus-divider--center">
+              <div className="lotus-line"></div>
+              <span className="lotus-ornament">📖</span>
+              <div className="lotus-line"></div>
+            </div>
+            <p className="section-desc" style={{ margin: "0 auto" }}>
+              यदि आप नहीं जानते कि कहाँ से शुरू करें, तो ये लेख आपके लिए सरल मार्गदर्शन हैं।
+            </p>
+          </div>
+
+          <div className="card-grid" role="list" style={{ marginTop: "var(--sp-xl)" }}>
+            <div role="listitem">
+              <a href="/blog/bhakti-start-here" className="devotional-card" aria-label="भक्ति की शुरुआत: ShraddhaSetu पर कैसे पढ़ें – पूरा पढ़ें">
+                <span className="card-icon" aria-hidden="true">📿</span>
+                <div className="card-category">मार्गदर्शन</div>
+                <h3 className="card-title">भक्ति की शुरुआत: ShraddhaSetu पर कैसे पढ़ें</h3>
+                <p className="card-desc">
+                  भक्ति-पाठ को सरल, नियमित और शांतिपूर्ण बनाने के लिए छोटा और व्यवहारिक मार्गदर्शन।
+                </p>
+                <span className="card-link">
+                  पूरा पढ़ें <span aria-hidden="true">→</span>
+                </span>
+              </a>
+            </div>
+            <div role="listitem">
+              <a href="/blog/hanuman-chalisa-path-tips" className="devotional-card" aria-label="हनुमान चालीसा पाठ: 7 सरल नियम – पूरा पढ़ें">
+                <span className="card-icon" aria-hidden="true">🙏</span>
+                <div className="card-category">मार्गदर्शन</div>
+                <h3 className="card-title">हनुमान चालीसा पाठ: 7 सरल नियम</h3>
+                <p className="card-desc">
+                  हनुमान चालीसा के पाठ को अधिक केंद्रित और नियमित बनाने के लिए सात सरल नियम।
+                </p>
+                <span className="card-link">
+                  पूरा पढ़ें <span aria-hidden="true">→</span>
+                </span>
+              </a>
+            </div>
           </div>
         </div>
       </section>

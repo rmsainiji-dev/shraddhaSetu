@@ -1,7 +1,6 @@
 {
   "name": "shraddhasetu",
   "version": "1.0.0",
-  "homepage": "https://rmsainji-dev.github.io/shraddhaSetu",
   "private": true,
   "scripts": {
     "dev": "next dev",

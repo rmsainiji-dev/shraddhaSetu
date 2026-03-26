@@ -1,23 +1,22 @@
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { GoogleAnalytics } from '@next/third-parties/google'
-
+import { GoogleAnalytics } from "@next/third-parties/google";
+export const dynamic = "force-static";
 export const metadata = {
-  metadataBase: new URL("https://www.shraddhaSetu.in"),
+  metadataBase: new URL("https://shraddha-setu.vercel.app"),
   title: {
-    default: "ShraddhaSetu – हिंदू भक्ति पोर्टल | हनुमान चालीसा, आरती, मंत्र",
+    default: "ShraddhaSetu – पवित्र भक्ति पोर्टल | हनुमान चालीसा, आरती, मंत्र",
     template: "%s | ShraddhaSetu",
   },
-   verification: {
-    google:"XblLD4XcUi0fcVduB22J3EJD5pB-U9WNJFW0dNKltnE",  // paste your code here
+  verification: {
+    google: "XblLD4XcUi0fcVduB22J3EJD5pB-U9WNJFW0dNKltnE",
   },
   description:
-    "ShraddhaSetu एक पवित्र हिंदू भक्ति मंच है जहाँ आप हनुमान चालीसा, आरती, मंत्र और स्तोत्र हिंदी तथा संस्कृत में पढ़ सकते हैं।",
+    "ShraddhaSetu एक पवित्र भक्ति मंच है जहाँ आप श्रद्धा और शांति के साथ हनुमान चालीसा, आरती, मंत्र और स्तोत्र का पाठ कर सकते हैं।",
   keywords: [
     "हनुमान चालीसा",
-    "Hanuman Chalisa Hindi",
-    "हनुमान चालीसा हिंदी",
+    "Hanuman Chalisa",
     "bhakti",
     "mantra",
     "aarti",
@@ -60,7 +59,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
-        <GoogleAnalytics gaId="G-67JCCZKVCY" /> {/* ← Replace with your ID */}
+        <GoogleAnalytics gaId="G-67JCCZKVCY" />
       </body>
     </html>
   );

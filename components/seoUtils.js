@@ -3,7 +3,7 @@
  * Generates Schema.org JSON-LD structured data
  */
 
-const SITE_URL = "https://www.shraddhaSetu.in";
+const SITE_URL = "https://shraddha-setu.vercel.app";
 const SITE_NAME = "ShraddhaSetu";
 
 /**

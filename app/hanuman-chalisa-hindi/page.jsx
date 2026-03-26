@@ -1,25 +1,53 @@
 import Link from "next/link";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd } from "../../components/seoUtils";
-
+export const dynamic = 'force-static';
+export const revalidate = false;
 export const metadata = {
-  title: "हनुमान चालीसा – संपूर्ण पाठ | दोहा, चौपाई और अर्थ",
+  title: "हनुमान चालीसा | श्रद्धा से पाठ करें",
+
   description:
-    "हनुमान चालीसा । संपूर्ण पाठ, दोहा और चौपाई सहित। अर्थ और महत्व के साथ। गोस्वामी तुलसीदास जी रचित संपूर्ण चालीसा।",
+    "हनुमान चालीसा का संपूर्ण पाठ पढ़ें। गोस्वामी तुलसीदास जी द्वारा रचित दोहा और चौपाई सहित पूर्ण पाठ – अर्थ, महत्व और लाभ सहित।",
+
   keywords: [
-    "हनुमान चालीसा हिंदी",
-    "Hanuman Chalisa Hindi",
+    "हनुमान चालीसा",
+    "हनुमान चालीसा पाठ",
+    "Hanuman Chalisa",
+    "Hanuman Chalisa Path",
+    "Hanuman Chalisa Lyrics",
     "हनुमान चालीसा संपूर्ण पाठ",
-    "हनुमान चालीसा अर्थ",
-    "hanuman chalisa lyrics hindi",
+    "Bajrang Baan",
   ],
+
+  authors: [{ name: "Shraddha Setu" }],
+  creator: "Shraddha Setu",
+  publisher: "Shraddha Setu",
+
+  alternates: {
+    canonical:
+      "https://shraddha-setu.vercel.app/hanuman-chalisa-hindi/",
+  },
+
   openGraph: {
-    title: "हनुमान चालीसा – संपूर्ण पाठ",
-    description: "हनुमान चालीसा। संपूर्ण पाठ, दोहा और चौपाई सहित। अर्थ और महत्व के साथ।",
-    url: "https://www.shraddhaSetu.in/hanuman-chalisa-hindi",
+    title:
+      "हनुमान चालीसा पाठ | Hanuman Chalisa Full Lyrics",
+    description:
+      "हनुमान चालीसा का संपूर्ण पाठ दोहा और चौपाई सहित पढ़ें।",
+    url:
+      "https://shraddha-setu.vercel.app/hanuman-chalisa-hindi/",
+    siteName: "Shraddha Setu",
+    locale: "hi_IN",
     type: "article",
   },
-  alternates: {
-    canonical: "https://www.shraddhaSetu.in/hanuman-chalisa-hindi",
+
+  twitter: {
+    card: "summary_large_image",
+    title: "हनुमान चालीसा | श्रद्धा से पाठ करें",
+    description: "हनुमान चालीसा का संपूर्ण पाठ पढ़ें और भक्ति का गहरा अनुभव करें।",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -93,8 +121,8 @@ const faqs = [
 
 export default function HanumanChalisaHindi() {
   const articleData = articleJsonLd({
-    headline: "हनुमान चालीसा हिंदी में – संपूर्ण पाठ",
-    description: "हनुमान चालीसा हिंदी में पढ़ें। संपूर्ण पाठ, दोहा और चौपाई सहित। अर्थ और महत्व के साथ।",
+    headline: "हनुमान चालीसा – संपूर्ण पाठ",
+    description: "हनुमान चालीसा पढ़ें – संपूर्ण पाठ, दोहा और चौपाई सहित। सरल व्याख्या और महत्व के साथ।",
     url: "/hanuman-chalisa-hindi",
     inLanguage: "hi",
     authorName: "गोस्वामी तुलसीदास",
@@ -102,7 +130,7 @@ export default function HanumanChalisaHindi() {
 
   const breadcrumbData = breadcrumbJsonLd([
     { name: "होम", url: "/" },
-    { name: "हनुमान चालीसा (हिंदी)", url: "/hanuman-chalisa-hindi" },
+    { name: "हनुमान चालीसा", url: "/hanuman-chalisa-hindi" },
   ]);
 
   const faqData = faqJsonLd(faqs);
@@ -135,11 +163,7 @@ export default function HanumanChalisaHindi() {
         <div className="chalisa-container container--narrow">
 
           {/* Language Switch */}
-          {/* <div className="lang-switch" role="navigation" aria-label="भाषा चयन">
-            <span className="lang-switch-label">भाषा चुनें:</span>
-            <Link href="/hanuman-chalisa-hindi" className="lang-btn active">हिंदी</Link>
-            <Link href="/hanuman-chalisa-sanskrit" className="lang-btn">संस्कृत</Link>
-          </div> */}
+          {/* भाषा स्विच (भविष्य के लिए संरचना) */}
 
           {/* Info Box */}
           <div className="info-box" role="note">
@@ -155,7 +179,7 @@ export default function HanumanChalisaHindi() {
             itemType="https://schema.org/Article"
             aria-label="हनुमान चालीसा संपूर्ण पाठ"
           >
-            <meta itemProp="name" content="हनुमान चालीसा हिंदी में" />
+            <meta itemProp="name" content="हनुमान चालीसा – संपूर्ण पाठ" />
             <meta itemProp="inLanguage" content="hi" />
             <meta itemProp="author" content="गोस्वामी तुलसीदास" />
 
@@ -213,7 +237,7 @@ export default function HanumanChalisaHindi() {
             <h2 id="artha-heading">अर्थ – चुनी हुई चौपाईयों का भावार्थ</h2>
             <p>
               हनुमान चालीसा की प्रत्येक चौपाई में गहरा आध्यात्मिक अर्थ छिपा है।
-              यहाँ कुछ प्रमुख चौपाईयों का सरल हिंदी में भावार्थ दिया जा रहा है:
+              यहाँ कुछ प्रमुख चौपाईयों का सरल और सहज भावार्थ दिया जा रहा है:
             </p>
 
             {meaningHighlights.map((m, i) => (

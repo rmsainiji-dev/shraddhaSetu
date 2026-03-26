@@ -724,6 +724,7 @@ button { cursor: pointer; font-family: inherit; }
   background: linear-gradient(90deg, var(--crimson), var(--saffron-warm), var(--gold), var(--saffron-warm), var(--crimson));
   background-size: 200% auto;
   animation: shimmer 4s linear infinite;
+  pointer-events: none;
 }
 
 .chalisa-section-head {
@@ -777,6 +778,22 @@ button { cursor: pointer; font-family: inherit; }
   color: var(--ink-faint);
   letter-spacing: 0.1em;
   margin-bottom: 0.25rem;
+}
+
+/* Final shlok / jaikara emphasis (Hanuman Ashtak blog + page) */
+.bhakti-ending {
+  font-weight: 600;
+  color: #b71c1c;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.chaupai-verse.bhakti-ending p {
+  font-weight: 600;
+  color: #b71c1c;
+  font-size: 20px;
+  text-align: center;
 }
 
 /* ─── CONTENT SECTIONS (Artha, Mahatmya etc.) ────────────── */
@@ -1001,6 +1018,7 @@ button { cursor: pointer; font-family: inherit; }
   padding: var(--sp-3xl) 0 var(--sp-xl);
   border-top: 3px solid transparent;
   position: relative;
+  z-index: 50;
 }
 
 .site-footer::before {

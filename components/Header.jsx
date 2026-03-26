@@ -6,6 +6,8 @@ import { usePathname } from "next/navigation";
 const navItems = [
   { href: "/", label: "होम" },
   { href: "/hanuman-chalisa-hindi", label: "हनुमान चालीसा"},
+  { href: "/hanuman-ashtak", label: "हनुमान अष्टक" },
+  { href: "/blog", label: "ब्लॉग" },
   // { href: "/hanuman-chalisa-sanskrit", label: "संस्कृत पाठ", badge: "Sanskrit" },
 ];
 
