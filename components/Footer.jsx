@@ -7,6 +7,7 @@ const footerLinks = {
   bhakti: [
     { href: "/hanuman-chalisa-hindi", label: "हनुमान चालीसा " },
     { href: "/hanuman-ashtak", label: "हनुमान अष्टक" },
+    { href: "/hanumat-stavan", label: "हनुमत् स्तवन" },
     { href: "/aarti/hanuman-ji-aarti", label: "हनुमान जी की आरती" },
   ],
   coming: [
